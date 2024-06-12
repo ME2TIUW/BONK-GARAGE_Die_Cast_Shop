@@ -1,64 +1,4 @@
-//package com.example.bonkgarage.Fragment
-//
-//import android.os.Bundle
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import androidx.fragment.app.Fragment
-//import androidx.recyclerview.widget.LinearLayoutManager
-//import androidx.recyclerview.widget.RecyclerView
-//import com.example.bonkgarage.Adapter.CarsListAdapter
-//import com.example.bonkgarage.CarDataManager
-//import com.example.bonkgarage.R
-//import com.example.mcs_lab_assignment.fragments.ARG_PARAM1
-//import com.google.firebase.firestore.FirebaseFirestore
-//
-//class HomeFragment : Fragment() {
-//    private var param1: String? = null
-//    private lateinit var recyclerView: RecyclerView
-//    private lateinit var adapter: CarsListAdapter
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//        }
-//    }
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//        val view = inflater.inflate(R.layout.fragment_home, container, false)
-//
-//
-//
-//        recyclerView = view.findViewById(R.id.rvCars)
-//
-//        // Set layout manager for the RecyclerView (horizontal scrolling)
-//        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-//
-//        // Create the CarsListAdapter with listener
-//        adapter = CarsListAdapter { carData ->
-//
-//        }
-//
-//        recyclerView.adapter = adapter
-//
-//        return view
-//    }
-//
-//    companion object {
-//
-//        @JvmStatic
-//        fun newInstance(param1: String?) =
-//            HomeFragment().apply {
-//                arguments = Bundle().apply {
-//                    putString(ARG_PARAM1, param1)
-//                }
-//            }
-//    }
-//}
+
 
 package com.example.bonkgarage.Fragment
 
@@ -114,8 +54,6 @@ class HomeFragment : Fragment() {
 
         // Create the CarsListAdapter with listener
         adapter = CarsListAdapter { carData ->
-            // Handle car click here (optional)
-            // You can display a toast or navigate to another activity
         }
 
         recyclerView.adapter = adapter
@@ -129,8 +67,6 @@ class HomeFragment : Fragment() {
         // Set click listener for best seller image
         ivBestSeller.setOnClickListener { startActivity(Intent(context, BestSellerActivity::class.java)) }
 
-        // Fetch or populate car data for the adapter (implementation needed)
-        // You can use CarDataManager or implement your own data fetching logic
 
         return view
     }
