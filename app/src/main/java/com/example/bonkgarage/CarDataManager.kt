@@ -6,9 +6,8 @@ class CarDataManager(private val db: FirebaseFirestore) {
 
     fun addCarDataToFirestore(carDataList: List<HashMap<String, Any>>) {
         val db = FirebaseFirestore.getInstance()
-        val colRef = db.collection("car_models") // Replace with your collection name
+        val colRef = db.collection("car_models") 
 
-        // Check if collection exists before adding data
         colRef.get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
