@@ -58,9 +58,7 @@ class ProfileFragment : Fragment() {
                     }
                 }
                 .addOnFailureListener { e ->
-                    // Handle Firestore read failure
                     e.printStackTrace()
-                    // You may want to display an error message to the user
                 }
         } else {
             // Handle case where no user is signed in
