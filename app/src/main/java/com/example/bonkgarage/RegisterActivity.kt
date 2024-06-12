@@ -28,7 +28,7 @@ class RegisterActivity: AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         auth = FirebaseAuth.getInstance()
-        etUsername = findViewById(R.id.etUsername) // Update with your EditText IDs
+        etUsername = findViewById(R.id.etUsername) 
         etPassword = findViewById(R.id.etPassword)
         etEmail = findViewById(R.id.etEmail)
         etPhoneNumber = findViewById(R.id.etPhoneNumber)
