@@ -130,11 +130,9 @@ class CarsDetailsActivity : AppCompatActivity() {
             finish()
         }
 
-        // Handle buy button click (implementation depends on your app logic)
         buybtn.setOnClickListener {
              quantity = etBuyCar.text.toString().toInt()// Get buy quantity
 
-            // Validate quantity (optional)
             if (quantity <= 0) {
                 Toast.makeText(this, "Invalid quantity. Please enter a positive value.", LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -142,7 +140,7 @@ class CarsDetailsActivity : AppCompatActivity() {
 
             // Extract car details from received intent or UI elements as needed
             val carName = carNameTextView.text.toString()
-            val carPrice = carPriceTextView.text.toString().toDouble()  // Assuming price is displayed as text
+            val carPrice = carPriceTextView.text.toString().toDouble()  
             quantity *= carPrice.toInt()
             val carImg = imageResource
             var documentId = ""
