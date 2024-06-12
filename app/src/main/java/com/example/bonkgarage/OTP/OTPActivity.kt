@@ -50,7 +50,6 @@ class OTPActivity : AppCompatActivity() {
         }
 
 
-        // Get the most recently added document from the "users" collection
         db.collection("users").document(currentUserId).get()
             .addOnSuccessListener { documentSnapshot ->
                 if (documentSnapshot.exists()) {
