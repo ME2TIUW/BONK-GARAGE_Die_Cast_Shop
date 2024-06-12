@@ -35,7 +35,6 @@ class LoginActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Configure Google Sign-In (add these lines)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail() // Optional: Request user's email
             .build()
@@ -65,11 +64,10 @@ class LoginActivity:AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Login successful, navigate to another activity (e.g., home screen)
                         val intent = Intent(
                             this,
                             MenuActivity::class.java
-                        ) // Replace with your target activity
+                        )
                         startActivity(intent)
                         finish()
                     } else {
@@ -109,7 +107,7 @@ class LoginActivity:AppCompatActivity() {
             auth.signInWithCredential(credential)
                 .addOnCompleteListener(this) { authResult ->
                     if (authResult.isSuccessful) {
-                        // Sign in success, navigate to home screen
+                        // Sign in success, navigate to menu screen
                         val intent = Intent(this, MenuActivity::class.java)
                         startActivity(intent)
                         finish()
