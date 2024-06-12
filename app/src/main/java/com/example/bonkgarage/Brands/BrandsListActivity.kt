@@ -28,12 +28,11 @@ class BrandsListActivity : AppCompatActivity() {
 
 
 
-        // Create an adapter with the brand data
+        
         val adapter = BrandsListAdapter() { brandName ->
 
         }
 
-        // Set the layout manager and adapter for the RecyclerView
         rvBrands.layoutManager = LinearLayoutManager(this)
         rvBrands.adapter = adapter
         txtBrands.text = "Brands"
