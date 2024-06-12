@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide // Add Glide for image loading
+import com.bumptech.glide.Glide 
 import com.example.bonkgarage.MenuActivity
 import com.example.bonkgarage.Model.Transaction
 import com.example.bonkgarage.Model.Transactions
@@ -90,7 +90,7 @@ class BestSellerActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documents ->
                 if (documents.isEmpty) {
-                    // Handle no bestseller car found (optional: show a message)
+                    
                     return@addOnSuccessListener
                 }
 
@@ -121,14 +121,14 @@ class BestSellerActivity : AppCompatActivity() {
                 bestSellerDescription.text = carDesc
             }
             .addOnFailureListener { exception ->
-                // Handle errors during data fetching (optional: show an error message)
+               
                 exception.printStackTrace()
             }
 
         buybtn.setOnClickListener {
             quantity = etBuyCar.text.toString().toInt()// Get buy quantity
 
-            // Validate quantity (optional)
+           
             if (quantity < 0) {
                 Toast.makeText(this, "Invalid quantity. Please enter a positive value.",
                     Toast.LENGTH_SHORT
