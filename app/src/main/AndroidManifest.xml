@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBSiEGwT73bDxPvpTBJyV1wdP74H6nCnWk" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
@@ -40,6 +47,12 @@
             android:exported="false" />
         <activity
             android:name=".OTP.OTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClosingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapsActivity"
             android:exported="false" />
         <activity
             android:name=".Brands.BrandsListActivity"
