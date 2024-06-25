@@ -29,7 +29,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="removed for confidentiality" />
+            android:value="AIzaSyBSiEGwT73bDxPvpTBJyV1wdP74H6nCnWk" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
